@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.25-alpine3.18
+          image: nginx:1-alpine3.18
           ports:
           - containerPort: 80
         
