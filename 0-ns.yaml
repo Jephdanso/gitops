@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+---
+# cs8TksdpG1jL74VV%
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: nginx-deployment
+#   namespace: integration
+#   labels: 
+#     app: nginx
+# spec:
+#   selector:
+#     app: nginx
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: integration
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+  containers:
+    - name: nginx
+      image: nginx:1.25-alpine3.18
+      ports:
+      - containerPort: 80
+        
+      
