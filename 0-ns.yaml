@@ -3,23 +3,23 @@
 # kind: Namespace
 # metadata:
 #   name: prod
-# ---
+---
 # cs8TksdpG1jL74VV%
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: nginx-deployment
-#   namespace: prod
-#   labels: 
-#     app: nginx
-# spec:
-#   selector:
-#     app: nginx
-#   ports:
-#     - protocol: TCP
-#       port: 80
-#       targetPort: 80
-# ---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+  namespace: prod
+  labels: 
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
