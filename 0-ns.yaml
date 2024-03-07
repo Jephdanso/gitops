@@ -8,7 +8,7 @@ metadata:
 # apiVersion: v1
 # metadata:
 #   name: nginx-deployment
-#   namespace: integration
+#   namespace: prod
 #   labels: 
 #     app: nginx
 # spec:
@@ -22,7 +22,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: integration
+  namespace: prod
   name: nginx-deployment
   labels:
     app: nginx
