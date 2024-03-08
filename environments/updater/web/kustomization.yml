@@ -1,0 +1,10 @@
+---
+namespace: stage
+replicas:
+  - name: nginx
+    count: 2
+images:
+  - name: jephdanso/nginx
+    newTag: v1
+resources:
+  - ../../../base
