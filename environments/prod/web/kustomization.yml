@@ -1,8 +1,8 @@
 ---
 namespace: prod
 replicas:
-  - name: nginx-updater
-    count: 2
+  - name: nginx
+    count: 4
 images:
   - name: jephdanso/nginx
     newTag: v1
