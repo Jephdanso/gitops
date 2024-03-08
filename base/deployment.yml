@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: stage
+  name: nginx-private
+  labels:
+    app: nginx-private
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-private
+  template:
+    metadata:
+      labels:
+        app: nginx-private
+    spec:
+      containers:
+        - name: nginx
+          imagePullPolicy: Always
+          image: jephdanso/nginx
+          ports:
+          - containerPort: 80
+      # imagePullSecrets:
+      #   - name: dockerconfigjson

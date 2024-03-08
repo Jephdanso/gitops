@@ -3,44 +3,44 @@
 # kind: Namespace
 # metadata:
 #   name: prod
----
-# cs8TksdpG1jL74VV%
-kind: Service
-apiVersion: v1
-metadata:
-  name: nginx
-  namespace: prod
-  labels: 
-    app: nginx
-spec:
-  selector:
-    app: nginx
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  namespace: prod
-  name: nginx
-  labels:
-    app: nginx
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-        - name: nginx
-          image: nginx:mainline-alpine-slim
-          ports:
-          - containerPort: 80
+# ---
+# # cs8TksdpG1jL74VV%
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: nginx
+#   namespace: prod
+#   labels: 
+#     app: nginx
+# spec:
+#   selector:
+#     app: nginx
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 80
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   namespace: prod
+#   name: nginx
+#   labels:
+#     app: nginx
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: nginx
+#   template:
+#     metadata:
+#       labels:
+#         app: nginx
+#     spec:
+#       containers:
+#         - name: nginx
+#           image: nginx:mainline-alpine-slim
+#           ports:
+#           - containerPort: 80
         
       
