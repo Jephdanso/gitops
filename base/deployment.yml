@@ -3,18 +3,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: stage
-  name: nginx-private
+  name: nginx-deployment
   labels:
-    app: nginx-private
+    app: nginx-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-private
+      app: nginx-deployment
   template:
     metadata:
       labels:
-        app: nginx-private
+        app: nginx-deployment
     spec:
       containers:
         - name: nginx
