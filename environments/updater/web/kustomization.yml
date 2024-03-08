@@ -1,7 +1,7 @@
 ---
 namespace: stage
 replicas:
-  - name: nginx
+  - name: nginx-updater
     count: 2
 images:
   - name: jephdanso/nginx
