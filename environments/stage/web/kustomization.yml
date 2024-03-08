@@ -1,10 +1,10 @@
 ---
-namespace: dev
+namespace: stage
 replicas:
   - name: nginx
-    count: 1
+    count: 3
 images:
   - name: jephdanso/nginx
-    newTag: v1.1
+    newTag: v1
 resources:
   - ../../../../public-apps/base
