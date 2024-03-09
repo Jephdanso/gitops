@@ -7,7 +7,7 @@ helm:
     value: jephdanso/webserver
     forcestring: false
   - name: image.tag
-    value: v1.5
+    value: v1.5.1
     forcestring: true
   - name: image.name
     value: jephdanso/webserver
