@@ -1,0 +1,14 @@
+helm:
+  parameters:
+  - name: replicaCount
+    value: "3"
+    forcestring: false
+  - name: image.repository
+    value: jephdanso/webserver
+    forcestring: false
+  - name: image.tag
+    value: v1.5.3
+    forcestring: true
+  - name: image.name
+    value: jephdanso/webserver
+    forcestring: true
