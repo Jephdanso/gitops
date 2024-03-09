@@ -1,4 +1,0 @@
-kustomize:
-  images:
-  - jephdanso/webserver:v1.2
-
