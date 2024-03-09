@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - jephdanso/webserver:v1.1
+  - jephdanso/webserver:v1.2
