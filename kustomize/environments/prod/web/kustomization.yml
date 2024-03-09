@@ -1,10 +1,9 @@
----
 namespace: prod
 replicas:
-  - name: nginx
-    count: 4
+- name: nginx
+  count: 4
 images:
-  - name: jephdanso/webserver
-    newTag: v1
+- name: jephdanso/webserver
+  newTag: v1.3
 resources:
-  - ../../../base
+- ../../../base
