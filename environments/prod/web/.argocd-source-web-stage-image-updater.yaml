@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - jephdanso/nginx:v1.2
